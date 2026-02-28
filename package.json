@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"build": "esbuild src/index.js --minify --bundle --loader:.css=text --outfile=dist/BloxdEmotes.js",
+    	"watch": "esbuild src/index.js --minify --bundle --loader:.css=text --outfile=dist/BloxdEmotes.js --watch"
+	},
+	"dependencies": {
+		"esbuild": "^0.25.10",
+		"webpack-userscript": "^3.2.3"
+	}
+}
