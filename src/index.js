@@ -38,9 +38,9 @@ observer.observe(document.body, {
 });
 
 function handleMessage(element) {
-    const parts = element.querySelectorAll(".IndividualText");
-    const username = parts[0]?.textContent?.trim();
-    const message = parts[2]?.textContent?.trim();
+    const parts = Object.values(element.querySelectorAll(".IndividualText"));
+    const username = parts.at(-3)?.textContent?.trim();
+    const message = parts.at(-1)?.textContent?.trim();
 
     if (username && message?.startsWith(emotePrefix)) {
         const emoteName = message.substring(emotePrefix.length).trim();
